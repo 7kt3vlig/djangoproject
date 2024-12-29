@@ -9,3 +9,9 @@ def index(request):
 
 def sjukt3vlig(request):
     return HttpResponse("Hello, 7kt3vlig!")
+
+
+def greet(request, name): 
+        return HttpResponse(f"Hello, {name.capitalize()}!")
+
+
