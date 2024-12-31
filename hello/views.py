@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 # Create your views here.
 def index(request):
-    return render(request, "Hello/index.html")
+    return render(request, "hello/index.html")
 
 
 def sjukt3vlig(request):
@@ -12,6 +12,8 @@ def sjukt3vlig(request):
 
 
 def greet(request, name): 
-        return HttpResponse(f"Hello, {name.capitalize()}!")
+        return render(request, "hello/greet.html", {
+             "name": name.capitalize
+        })
 
 
