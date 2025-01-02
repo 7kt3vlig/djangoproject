@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from django import forms
+from django.http import HttpResponseRedirect
+from django.urls import reverse
 
 class NewTaskForm(forms.Form):
     task = forms.CharField(label="New task")
@@ -18,6 +20,7 @@ def add(request):
         if form.is_valid():
             task = form.cleaned_data["task"]
             tasks.append(task) 
+            return HttpResponseRedirect(reverse("tasks:ubdex"))
         else: 
             return render(request, "tasks/add.html", {
                 "form": form
