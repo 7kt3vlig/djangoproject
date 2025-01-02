@@ -1,6 +1,6 @@
 {% extends "tasks/layouts.html" %}
 
-{% blockbody %}
+{% block body %}
 
 <h1> Tasks </h1>
         <ul>
@@ -9,5 +9,5 @@
             {% endfor %}
            
         </ul>
-        <a href="{% url 'add' %}"> Add a new task</a>
+        <a href="{% url 'tasks:add' %}"> Add a new task</a>
 {% endblock %}
