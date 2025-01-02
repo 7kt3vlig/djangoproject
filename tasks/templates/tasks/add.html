@@ -4,7 +4,7 @@
         <h1> Add task</h1>
        <form action="{% url 'tasks:add' %}" method="post">
         {% csrf_token %}
-        {% form %}
+        {{form}}
             <input type="submit" name="nottasktotestnameattirbute">
 
        </form>
